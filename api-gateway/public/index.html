@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore microservices architecture with live user and product data. Built by Govind Kumawat – Full Stack Developer at The Developer School." />
+  <meta name="keywords" content="microservices, full stack developer, nodejs, reactjs, api gateway, freelance developer, Govind Kumawat, The Developer School" />
+  <meta name="author" content="Govind Kumawat" />
+
+  <title>Microservices Demo by Govind Kumawat | Full Stack Developer</title>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Govind Kumawat",
+      "url": "https://thedeveloperschool.in",
+      "sameAs": [
+        "https://www.linkedin.com/in/govindkumawat",
+        "https://www.youtube.com/@TheDeveloperSchool"
+      ],
+      "jobTitle": "Full Stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "The Developer School"
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f8f9fa;
+      color: #212529;
+    }
+    header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .buttons {
+      margin: 2rem 0;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0b5ed7;
+    }
+    section {
+      background-color: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    pre {
+      background-color: #f1f3f5;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      color: #6c757d;
+    }
+    a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microservices Architecture Demo</h1>
+    <p>Built by Govind Kumawat – Full Stack Developer @ <a href="https://thedeveloperschool.in" target="_blank" style="color: #ffc107;">The Developer School</a></p>
+  </header>
+
+  <div class="buttons">
+    <button onclick="fetchUsers()">Load Users</button>
+    <button onclick="fetchProducts()">Load Products</button>
+  </div>
+
+  <section>
+    <h2>Users</h2>
+    <pre id="usersOutput">Click "Load Users" to view data</pre>
+  </section>
+
+  <section>
+    <h2>Products</h2>
+    <pre id="productsOutput">Click "Load Products" to view data</pre>
+  </section>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I'm <strong>Govind Kumawat</strong>, a passionate <strong>Full Stack Developer</strong> with 4+ years of experience in building scalable web applications using Node.js, Laravel, React, Angular, and more. I'm also the founder of <a href="https://www.youtube.com/@TheDeveloperSchool" target="_blank">The Developer School</a> where I share coding tutorials, interview prep, and real-world project guides.</p>
+    <p>If you're looking for a reliable freelancer or a full-time remote developer for your next project, I'm open to opportunities!</p>
+    <p><a href="https://www.linkedin.com/in/govind-kumawat-201556166/">📩 Hire me as a Full Stack Developer</a></p>
+  </section>
+
+  <footer>
+    © 2025 Govind Kumawat • <a href="https://www.youtube.com/@TheDeveloperSchool" target="_blank">YouTube</a> • <a href="https://www.linkedin.com/in/govind-kumawat-201556166/" target="_blank">LinkedIn</a>
+  </footer>
+
+  <script>
+    async function fetchUsers() {
+      const res = await fetch('/users');
+      const data = await res.json();
+      document.getElementById('usersOutput').textContent = JSON.stringify(data, null, 2);
+    }
+
+    async function fetchProducts() {
+      const res = await fetch('/products');
+      const data = await res.json();
+      document.getElementById('productsOutput').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

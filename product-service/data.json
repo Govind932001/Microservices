@@ -1,0 +1,17 @@
+[
+  {
+    "id": 101,
+    "name": "Wireless Mouse",
+    "price": 499
+  },
+  {
+    "id": 102,
+    "name": "Mechanical Keyboard",
+    "price": 2499
+  },
+  {
+    "id": 103,
+    "name": "HD Monitor",
+    "price": 8999
+  }
+]
