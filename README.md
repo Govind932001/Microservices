@@ -50,33 +50,11 @@ This project demonstrates a simple microservices architecture using **Node.js an
 
 ### 1. Clone the repo
 
-
 git clone https://github.com/your-username/microservices-example.git
 cd microservices-example
-📁 Folder Structure
-pgsql
-Copy
-Edit
-
-microservices-example/
-│
-├── user-service/
-│   ├── index.js
-│   ├── data.json
-│
-├── product-service/
-│   ├── index.js
-│   ├── data.json
-│
-├── api-gateway/
-│   ├── index.js
-│   └── public/
-│       └── index.html
-│
-└── README.md
 
 
 
-node user-service/index.js
-node product-service/index.js
-node api-gateway/index.js
+### node user-service/index.js
+### node product-service/index.js
+### node api-gateway/index.js
